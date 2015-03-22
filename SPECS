@@ -1,0 +1,22 @@
+## OS Spec Sheet ##
+Text Logo:
+  __  __     _ ____        ______  ____  
+ / / / /__  (_) _(_)__ ___/ / __ \/ __/  
+/ /_/ / _ \/ / _/ / -_) _  / /_/ /\ \    
+\____/_//_/_/_//_/\__/\_,_/\____/___/    
+
+Kernel Type: Linux (Monolithic)
+Projected Kernel Ver: 4.0 (Live Kernel Patching)                                         
+Dirv: Debian
+Arch: AMD64 (i386 limited to 4GB RAM)
+Installer: Bare-Minimal Debian Installer
+Desktop Enviroment: None, ncurses based with a webmin / cloudmin administration
+
+## Critical Packages ##
+KVM
+qemu
+webmin
+cloudmin
+ncurses
+
+Note: cloudmin and webmin may be replaced by oVirt Engine
