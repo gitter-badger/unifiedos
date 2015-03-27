@@ -10,13 +10,14 @@ Projected Kernel Ver: 4.0 (Live Kernel Patching)
 Dirv: Debian
 Arch: AMD64 (i386 limited to 4GB RAM)
 Installer: Bare-Minimal Debian Installer
-Desktop Enviroment: None, ncurses based with a webmin / cloudmin administration
+Desktop Enviroment: None, ncurses based + Webmin (Local) + rancher (cluster management)
 
 ## Critical Packages ##
-KVM
-qemu
+Docker.io
+rancher
 webmin
-cloudmin
 ncurses
+
++ deps
 
 Note: cloudmin and webmin may be replaced by oVirt Engine
