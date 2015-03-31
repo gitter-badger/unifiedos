@@ -21,20 +21,20 @@ else
  wait 2 
 
 ## Build Prompt
-echo Please enter "wheezy" or "precise" to build for debian or ubuntu on the amd64 arch.
-echo Please enter wheezy or precise
-read BUILD
+read -p "Please enter "wheezy" to build the base image on the amd64 arch" BUILD
 echo "You chose $BUILD"
 if [ "x$BUILD" = "xwheezy" ]
 then
-	# Build for wheezy wheezy
+    # Build for debian wheezy
+    lb config --bootloader grub -d wheezy -a amd64 --debian-installer netinst
 else
-	if [ "x$BUILD" = "xprecise" ]
-then
-	# Build for ubuntu precise
-else
-echo You did not select the correct build name.
-wait 3
+    # Exit Script
+    echo Exiting Build Script.
+    echo See you again.
+    wait 3
+    exit
+
+## Ask if user wants to build again.
 read -p "Do you want to retry or quit to terminal? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Redoing Script";
