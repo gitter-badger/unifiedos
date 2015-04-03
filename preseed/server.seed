@@ -1,2 +1,24 @@
 ### Package selection
 tasksel tasksel/first multiselect standard
+
+#d-i preseed/late_command string apt-install zsh; in-target chsh -s /bin/zsh
+d-i pressed/late_command string \
+echo '' > /target/motd.tail
+echo '' >> /target/motd.tail
+
+echo '   __  __      _ _____          __   ____  _____' >> /target/motd.tail
+echo '  / / / /___  (_) __(_)__  ____/ /  / __ \/ ___/' >> /target/motd.tail
+echo ' / / / / __ \/ / /_/ / _ \/ __  /  / / / /\__ \ ' >> /target/motd.tail
+echo '/ /_/ / / / / / __/ /  __/ /_/ /  / /_/ /___/ / ' >> /target/motd.tail
+echo '\____/_/ /_/_/_/ /_/\___/\__,_/   \____//____/  ' >> /target/motd.tail
+echo 'Unified OS Core Alpha (Debian GNU/Linux 7.8)' >> /target/motd.tail
+echo ' ' >> /target/motd.tail
+echo 'The programs included with this build of Unified OS Core GNU are free software;' >> /target/etc/motd.tail
+echo 'the exact distribution terms for each program are described in the' >> /target/etc/motd.tail
+echo 'individual files in /usr/share/doc/*/copyright.' >> /target/etc/motd.tail
+echo ' ' >> /target/etc/motd.tail
+echo 'This build of Unified OS GNU/Linux comes with ABSOLUTELY NO WARRANTY,' >> /target/etc/motd.tail
+echo 'to the extent permitted by applicable law.' >> /target/etc/motd.tail
+echo ' ' >> /target/etc/motd.tail
+echo 'Information about Unified OS GNU/Linux can be found at http://junland.github.io/unifiedos/' >> /target/etc/motd.tail
+
